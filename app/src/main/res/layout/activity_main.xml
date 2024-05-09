@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework assignment 1\nVladimir Roroginin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer will Appear here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/etNum1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="_"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spActions"
+        app:layout_constraintTop_toBottomOf="@id/tvRes"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/etNum2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="_"
+        app:layout_constraintStart_toEndOf="@id/spActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRes"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <Spinner
+        android:id="@+id/spActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/operator_options"
+        app:layout_constraintStart_toEndOf="@id/etNum1"
+        app:layout_constraintEnd_toEndOf="@id/etNum2"
+        app:layout_constraintTop_toBottomOf="@id/tvRes"
+        android:layout_marginTop="60dp"
+        />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="CALC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spActions"
+        android:layout_marginTop="100dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
